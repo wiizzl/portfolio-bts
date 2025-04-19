@@ -1,0 +1,141 @@
+---
+import { Github, Instagram, Linkedin, Mail } from "lucide-astro";
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+import Nav from "@/components/Nav.astro";
+import Section from "@/components/Section.astro";
+
+const socials = [
+  { label: "LinkedIn", icon: Linkedin, link: "https://linkedin.com/in/operrehoulliere" },
+  { label: "GitHub", icon: Github, link: "https://github.com/wiizzl" },
+  { label: "Instagram", icon: Instagram, link: "https://instagram.com/pierre.hlr_" },
+  { label: "Mail", icon: Mail, link: "mailto:contact@houlliere.com" },
+];
+---
+
+<BaseLayout>
+  <Nav />
+
+  <div class="text-muted-foreground space-y-6">
+    <section class="space-y-2">
+      <div>
+        <h2 class="text-lg font-semibold">Profil</h2>
+        <p>
+          Étudiant en informatique et développeur web freelance. Actuellement à la recherche d'un stage de 5 semaines (du 26 mai au 27 juin 2025) en développement pour valider ma première année de BTS
+          Services Informatiques aux Organisations (SIO).
+        </p>
+      </div>
+      <div class="flex items-center gap-x-2.5">
+        {
+          socials.map((social) => (
+            <a href={social.link} class="text-muted-foreground" target="_blank">
+              <social.icon class="size-5 stroke-[1.8]" />
+              <span class="sr-only">{social.label}</span>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+    <section class="flex flex-wrap justify-between">
+      <div>
+        <h2 class="text-lg font-semibold">Expériences</h2>
+        <div class="space-y-4">
+          <Section
+            title="Olympiades des Métiers (WorldSkills)"
+            startDate={new Date("2024-11-19")}
+            content={[
+              "Première place (médaille d'or)",
+              "Qualification pour la finale nationale à Marseille (16-18 octobre 2025)",
+              "Séances de préparation mentale et physique",
+              "Entraînement avec un coach tout au long de l'année",
+            ]}
+          />
+          <Section
+            title="Développeur Web Freelance"
+            startDate={new Date("2023-01-01")}
+            content={[
+              "Développement d'applications web (Startup, SaaS)",
+              "E-Commerce (folding-art.fr, laine-maille.fr)",
+              "Frameworks : Next.js (React)",
+              "Bases de données : PostgreSQL, MongoDB",
+              "Méthodes agiles via tableaux Kanban",
+              "Documentation (info-galilee.vercel.app)",
+              "Animation : Framer Motion",
+              "Portfolio (pierreh.vercel.app)",
+              "Développement d'applications mobiles",
+              "B-Pump (github.com/b-pump/bpump-app)",
+              "Framework : Expo (React Native)",
+              "Méthode : Cycle en V en équipe",
+              "Cosmic-Pics (github.com/wiizzl/cosmic-pics)",
+              "Développement d'API",
+              "RESTful (github.com/b-pump/bpump-api)",
+              "FastAPI (Python), Express (TypeScript)",
+            ]}
+          />
+        </div>
+      </div>
+      <div class="space-y-4">
+        <div>
+          <h2 class="text-lg font-semibold">Formations</h2>
+          <div class="space-y-6">
+            <Section
+              title="Campus La Chataigneraie"
+              startDate={new Date("2024-09-01")}
+              endDate={new Date("2026-07-01")}
+              content={["BTS Services Informatiques aux Organisations (SIO)", "Option SLAM (Développement)"]}
+            />
+            <Section
+              title="Lycée Galilée (Franqueville)"
+              startDate={new Date("2021-09-01")}
+              endDate={new Date("2024-07-01")}
+              content={["Baccalauréat général (Mention Bien)", "Spécialités : Mathématiques et Sciences de l'Ingénieur"]}
+            />
+          </div>
+        </div>
+        <div>
+          <h2 class="text-lg font-semibold">Compétences</h2>
+          <ul>
+            <li>JavaScript / TypeScript</li>
+            <li>React.js (Next.js)</li>
+            <li>Vue.js (Nuxt.js)</li>
+            <li>React Native (Expo)</li>
+            <li>Programmation orientée objet (POO)</li>
+            <li>Rust (Tauri)</li>
+            <li>C#.NET</li>
+            <li>HTML, CSS, TailwindCSS, UnoCSS, Sass</li>
+            <li>PHP (Laravel & Symfony)</li>
+            <li>Bases de données : MySQL, PostgreSQL, Redis, MongoDB</li>
+            <li>SQL, ORM (Prisma, Drizzle)</li>
+            <li>Python, Machine Learning, POO</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="flex flex-wrap justify-between">
+      <div>
+        <h2 class="text-lg font-semibold">Logiciels</h2>
+        <ul>
+          <li>VS Code</li>
+          <li>WebStorm</li>
+          <li>Neovim</li>
+          <li>Visual Studio / Rider</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold">Langues</h2>
+        <ul>
+          <li>Anglais (B2)</li>
+          <li>Allemand (A2)</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold">Loisirs</h2>
+        <ul>
+          <li>Programmation</li>
+          <li>Jeux vidéo</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,23 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+export const getStaticPaths = (async () => {
+  const posts = await getCollection("veille");
+  return posts.map((post) => {
+    return {
+      params: { id: post.id, slug: post.id },
+      props: { title: post.data.title },
+    };
+  });
+}) satisfies GetStaticPaths;
+
+const { id } = Astro.params;
+const { title } = Astro.props;
+---
+
+<BaseLayout>
+  <!-- TODO: post content -->
+</BaseLayout>

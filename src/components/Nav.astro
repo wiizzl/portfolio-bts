@@ -1,0 +1,25 @@
+---
+import info from "@/config/info.json";
+
+const links = [
+  { href: "/veille", label: "Veille" },
+  { href: "/rectorat", label: "Rectorat" },
+];
+---
+
+<div class="flex items-baseline gap-x-8">
+  <a href="/">
+    <h1 class="font-semibold mb-6">
+      {info.name.toLowerCase()}~
+    </h1>
+  </a>
+  <div class="flex items-center gap-x-5">
+    {
+      links.map((item) => (
+        <a href={item.href} class="border-b-2 text-accent-foreground hover:text-muted-foreground">
+          {item.label.toLowerCase()}
+        </a>
+      ))
+    }
+  </div>
+</div>
