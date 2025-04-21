@@ -14,7 +14,7 @@ const collections = {
       author: z.string().min(3).max(26),
       source: z.string().url(),
       boundaries: z.array(z.string().min(5).max(10)),
-      date: z.date(),
+      date: z.coerce.date(),
     }),
   }),
 };

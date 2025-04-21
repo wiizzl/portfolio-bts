@@ -38,47 +38,63 @@ const socials = [
       </div>
     </section>
     <section class="flex flex-wrap justify-between">
-      <div>
-        <h2 class="text-lg font-semibold">Expériences</h2>
-        <div class="space-y-4">
-          <Section
-            title="Olympiades des Métiers (WorldSkills)"
-            startDate={new Date("2024-11-19")}
-            content={[
-              "Première place (médaille d'or)",
-              "Qualification pour la finale nationale à Marseille (16-18 octobre 2025)",
-              "Séances de préparation mentale et physique",
-              "Entraînement avec un coach tout au long de l'année",
-            ]}
-          />
-          <Section
-            title="Développeur Web Freelance"
-            startDate={new Date("2023-01-01")}
-            content={[
-              "Développement d'applications web (Startup, SaaS)",
-              "E-Commerce (folding-art.fr, laine-maille.fr)",
-              "Frameworks : Next.js (React)",
-              "Bases de données : PostgreSQL, MongoDB",
-              "Méthodes agiles via tableaux Kanban",
-              "Documentation (info-galilee.vercel.app)",
-              "Animation : Framer Motion",
-              "Portfolio (pierreh.vercel.app)",
-              "Développement d'applications mobiles",
-              "B-Pump (github.com/b-pump/bpump-app)",
-              "Framework : Expo (React Native)",
-              "Méthode : Cycle en V en équipe",
-              "Cosmic-Pics (github.com/wiizzl/cosmic-pics)",
-              "Développement d'API",
-              "RESTful (github.com/b-pump/bpump-api)",
-              "FastAPI (Python), Express (TypeScript)",
-            ]}
-          />
+      <div class="space-y-4">
+        <div>
+          <h2 class="text-lg font-semibold">Expériences</h2>
+          <div class="space-y-2">
+            <Section
+              title="Olympiades des Métiers (WorldSkills)"
+              startDate={new Date("2024-11-19")}
+              content={[
+                "Première place (médaille d'or)",
+                "Qualification pour la finale nationale à Marseille (16-18 octobre 2025)",
+                "Séances de préparation mentale et physique",
+                "Entraînement avec un coach tout au long de l'année",
+              ]}
+            />
+            <Section
+              title="Développeur Web Freelance"
+              startDate={new Date("2023-01-01")}
+              content={[
+                "Développement d'applications web (Startup, SaaS)",
+                "E-Commerce (folding-art.fr, laine-maille.fr)",
+                "Frameworks : Next.js (React)",
+                "Bases de données : PostgreSQL, MongoDB",
+                "Méthodes agiles via tableaux Kanban",
+                "Documentation (info-galilee.vercel.app)",
+                "Animation : Framer Motion",
+                "Portfolio (houlliere.com)",
+                "Développement d'applications mobiles",
+                "B-Pump (github.com/b-pump/bpump-app)",
+                "Framework : Expo (React Native)",
+                "Méthode : Cycle en V en équipe",
+                "Cosmic-Pics (github.com/wiizzl/cosmic-pics)",
+                "Développement d'API",
+                "RESTful (github.com/b-pump/bpump-api)",
+                "FastAPI (Python), Express (TypeScript)",
+              ]}
+            />
+          </div>
+        </div>
+        <div>
+          <h2 class="text-lg font-semibold">Logiciels</h2>
+          <div>
+            <Section content={["VS Code", "WebStorm", "Neovim", "Visual Studio / Rider"]} />
+          </div>
+        </div>
+        <div>
+          <h2 class="text-lg font-semibold">Langues</h2>
+          <Section content={["Anglais (B2)", "Allemand (A2)"]} />
+        </div>
+        <div>
+          <h2 class="text-lg font-semibold">Loisirs</h2>
+          <Section content={["Programmation", "Jeux vidéos"]} />
         </div>
       </div>
       <div class="space-y-4">
         <div>
           <h2 class="text-lg font-semibold">Formations</h2>
-          <div class="space-y-6">
+          <div class="space-y-2">
             <Section
               title="Campus La Chataigneraie"
               startDate={new Date("2024-09-01")}
@@ -95,46 +111,16 @@ const socials = [
         </div>
         <div>
           <h2 class="text-lg font-semibold">Compétences</h2>
-          <ul>
-            <li>JavaScript / TypeScript</li>
-            <li>React.js (Next.js)</li>
-            <li>Vue.js (Nuxt.js)</li>
-            <li>React Native (Expo)</li>
-            <li>Programmation orientée objet (POO)</li>
-            <li>Rust (Tauri)</li>
-            <li>C#.NET</li>
-            <li>HTML, CSS, TailwindCSS, UnoCSS, Sass</li>
-            <li>PHP (Laravel & Symfony)</li>
-            <li>Bases de données : MySQL, PostgreSQL, Redis, MongoDB</li>
-            <li>SQL, ORM (Prisma, Drizzle)</li>
-            <li>Python, Machine Learning, POO</li>
-          </ul>
+          <div class="space-y-2">
+            <Section title="Langages" content={["JavaScript / TypeScript", "HTML / CSS", "C# .NET", "Rust", "PHP", "Python"]} />
+            <Section title="Frontend" content={["React.js (Next.js)", "Vue.js (Nuxt.js)", "TailwindCSS / UnoCSS", "Laravel / Symfony"]} />
+            <Section title="Backend" content={["Express", "Hono", "FastAPI"]} />
+            <Section title="Mobile" content={["React Native (Expo)", "MAUI"]} />
+            <Section title="Bureau" content={["Tauri"]} />
+            <Section title="Données" content={["MySQL", "PostgreSQL", "Redis", "MongoDB", "SQLServer", "SQL", "ORM (Prisma, Drizzle)"]} />
+            <Section title="Logiciel" content={["Programmation orientée objet (POO)", "Machine Learning"]} />
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="flex flex-wrap justify-between">
-      <div>
-        <h2 class="text-lg font-semibold">Logiciels</h2>
-        <ul>
-          <li>VS Code</li>
-          <li>WebStorm</li>
-          <li>Neovim</li>
-          <li>Visual Studio / Rider</li>
-        </ul>
-      </div>
-      <div>
-        <h2 class="text-lg font-semibold">Langues</h2>
-        <ul>
-          <li>Anglais (B2)</li>
-          <li>Allemand (A2)</li>
-        </ul>
-      </div>
-      <div>
-        <h2 class="text-lg font-semibold">Loisirs</h2>
-        <ul>
-          <li>Programmation</li>
-          <li>Jeux vidéo</li>
-        </ul>
       </div>
     </section>
   </div>

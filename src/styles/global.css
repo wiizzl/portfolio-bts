@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 /* https://tailwindcss.com/docs/upgrade-guide#buttons-use-the-default-cursor */
 @layer base {

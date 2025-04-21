@@ -2,8 +2,8 @@
 import { formatDate } from "@/lib/utils";
 
 interface Props {
-  title: string;
-  startDate: Date;
+  title?: string;
+  startDate?: Date;
   endDate?: Date;
   content: string[];
 }
@@ -12,8 +12,14 @@ const { title, content, startDate, endDate } = Astro.props;
 ---
 
 <div>
-  <h3 class="font-medium">{title}</h3>
-  <p class="capitalize text-xs">{formatDate(startDate)} - {endDate ? formatDate(endDate) : "Présent"}</p>
+  {title && <h3 class="font-medium">{title}</h3>}
+  {
+    startDate && (
+      <p class="capitalize text-xs">
+        {formatDate(startDate)} - {endDate ? formatDate(endDate) : "Présent"}
+      </p>
+    )
+  }
   <ul>
     {content.map((item) => <li>{item}</li>)}
   </ul>

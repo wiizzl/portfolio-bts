@@ -1,0 +1,40 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+import Nav from "@/components/Nav.astro";
+
+import { formatDate } from "@/lib/utils";
+import { render } from "astro:content";
+
+export const getStaticPaths = (async () => {
+  const posts = await getCollection("veille");
+
+  return posts.map((post) => {
+    return {
+      params: { id: post.id },
+      props: { post },
+    };
+  });
+}) satisfies GetStaticPaths;
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout>
+  <Nav />
+
+  <div class="text-muted-foreground">
+    <h1 class="text-2xl">{post.data.title}</h1>
+    <ul>
+      <li>Auteur : {post.data.author}</li>
+      <li>Source : <a href={post.data.source} target="_blank" class="hover:underline">{post.data.source}</a></li>
+      <li>Bornage : {post.data.boundaries.join(", ")}</li>
+      <li class="capitalize">Date : {formatDate(post.data.date)}</li>
+    </ul>
+    <article class="mt-10 prose max-w-full"><Content /></article>
+  </div>
+</BaseLayout>
