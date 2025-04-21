@@ -3,6 +3,7 @@ import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import ContentLayout from "@/layouts/ContentLayout.astro";
 
 import Nav from "@/components/Nav.astro";
 
@@ -25,16 +26,18 @@ const { Content } = await render(post);
 ---
 
 <BaseLayout>
-  <Nav />
+  <ContentLayout title={post.data.title}>
+    <Nav />
 
-  <div class="text-muted-foreground">
-    <h1 class="text-2xl">{post.data.title}</h1>
-    <ul>
-      <li>Auteur : {post.data.author}</li>
-      <li>Source : <a href={post.data.source} target="_blank" class="hover:underline">{post.data.source}</a></li>
-      <li>Bornage : {post.data.boundaries.join(", ")}</li>
-      <li class="capitalize">Date : {formatDate(post.data.date)}</li>
-    </ul>
-    <article class="mt-10 prose max-w-full"><Content /></article>
-  </div>
+    <div class="text-muted-foreground">
+      <h1 class="text-2xl">{post.data.title}</h1>
+      <ul>
+        <li>Auteur : {post.data.author}</li>
+        <li>Source : <a href={post.data.source} target="_blank" class="hover:underline">{post.data.source}</a></li>
+        <li>Bornage : {post.data.boundaries.join(", ")}</li>
+        <li class="capitalize">Date : {formatDate(post.data.date)}</li>
+      </ul>
+      <article class="mt-10 prose max-w-full"><Content /></article>
+    </div>
+  </ContentLayout>
 </BaseLayout>
