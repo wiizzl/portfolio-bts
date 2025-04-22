@@ -1,9 +1,36 @@
 {
   "theme": "L'écosystème JavaScript",
-  "description": "",
+  "description": "Test desc présentation du thème",
   "boundaries": [
-    { "name": "React", "description": "" },
-    { "name": "Node.js", "description": "" },
-    { "name": "API", "description": "" }
+    {
+      "name": "React",
+      "description": "bibliothèque JS pour construire des interfaces utilisateur interactives"
+    },
+    {
+      "name": "Node.js",
+      "description": "environnement d'exécution JS côté serveur permettant de créer des applications performantes"
+    },
+    {
+      "name": "API",
+      "description": "interface de programmation permettant à différentes applications de communiquer entre elles"
+    }
+  ],
+  "tools": [
+    {
+      "name": "daily.dev",
+      "description": "un aggrégateur de flux RSS qui s'alimente automatiquement"
+    },
+    {
+      "name": "Google Alert",
+      "description": "service de veille par mots-clés, notifications par email"
+    },
+    {
+      "name": "Feedly",
+      "description": "lecteur de flux RSS pour organiser et suivre des sources d'information"
+    },
+    {
+      "name": "Newsletter thisweekinreact.com",
+      "description": "mail hebdomadaire par un mainteneur de React"
+    }
   ]
 }

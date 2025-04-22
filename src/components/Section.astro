@@ -5,7 +5,7 @@ interface Props {
   title?: string;
   startDate?: Date;
   endDate?: Date;
-  content: string[];
+  content: string[] | string;
 }
 
 const props = Astro.props;
@@ -21,6 +21,6 @@ const props = Astro.props;
     )
   }
   <ul>
-    {props.content.map((item) => <li>{item}</li>)}
+    {typeof props.content === "string" ? <p class="text-sm">{props.content}</p> : props.content.map((item) => <li>{item}</li>)}
   </ul>
 </div>

@@ -24,20 +24,6 @@ const collections = {
     }),
   }),
 
-  tool: defineCollection({
-    loader: glob({
-      pattern: "**/*.mdx",
-      base: "./src/content/tool",
-    }),
-
-    schema: z.object({
-      title: z.string().min(26).max(56),
-      category: z.enum(["Agrégateur de flux RSS", "Envoyeur d'alertes"]),
-      source: z.string().url(),
-      date: z.coerce.date(),
-    }),
-  }),
-
   rectorat: defineCollection({
     loader: glob({
       pattern: "**/*.mdx",
