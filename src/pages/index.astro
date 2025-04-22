@@ -1,5 +1,5 @@
 ---
-import { Github, Instagram, Linkedin, Mail } from "lucide-astro";
+import { Github, Linkedin, Mail } from "lucide-astro";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
@@ -8,7 +8,6 @@ import Section from "@/components/Section.astro";
 const socials = [
   { label: "LinkedIn", icon: Linkedin, link: "https://linkedin.com/in/pierrehoulliere" },
   { label: "GitHub", icon: Github, link: "https://github.com/wiizzl" },
-  { label: "Instagram", icon: Instagram, link: "https://instagram.com/pierre.hlr_" },
   { label: "Mail", icon: Mail, link: "mailto:contact@houlliere.com" },
 ];
 ---
@@ -85,7 +84,7 @@ const socials = [
         </div>
         <div>
           <h2 class="text-lg font-semibold">Loisirs</h2>
-          <Section content={["Programmation", "Jeux vidéos"]} />
+          <Section content={["Programmation", "Jeux vidéo"]} />
         </div>
       </div>
       <div class="space-y-4">

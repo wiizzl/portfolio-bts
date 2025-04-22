@@ -1,11 +1,10 @@
 ---
 import type { GetStaticPaths } from "astro";
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 import { formatDate } from "@/lib/utils";
-import { render } from "astro:content";
 
 export const getStaticPaths = (async () => {
   const posts = await getCollection("veille");
@@ -32,7 +31,7 @@ const { Content } = await render(post);
       <li>Bornage : {post.data.boundarie}</li>
       <li class="capitalize">Date : {formatDate(post.data.date)}</li>
     </ul>
-    <article class="mt-10 prose max-w-full">
+    <article class="mt-5 prose max-w-full">
       <Content />
     </article>
   </div>
