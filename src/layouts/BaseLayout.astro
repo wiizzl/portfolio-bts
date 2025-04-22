@@ -6,10 +6,17 @@ import Nav from "@/components/Nav.astro";
 import info from "@/config/info.json";
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+interface Props {
+  title: string;
+  className?: string;
+}
+
+const props = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,11 +38,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:site_name" content={info.name} />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <title>{info.name}</title>
+    <title>{`${props.title} | ${info.name}`}</title>
   </head>
-  <body class="antialiased selection:bg-primary selection:text-accent-foreground">
-    <main class="h-full mx-auto w-full max-w-screen-2xl px-6 md:px-20 py-5 md:py-12">
-      <Nav />
+  <body class="antialiased selection:bg-primary selection:text-accent-foreground h-full mx-auto w-full max-w-screen-2xl px-6 md:px-20 py-5 md:py-12">
+    <Nav />
+    <main class={props.className}>
       <slot />
     </main>
   </body>

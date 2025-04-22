@@ -3,23 +3,40 @@ import { getCollection } from "astro:content";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
+import Section from "@/components/Section.astro";
+
 import { formatDate } from "@/lib/utils";
+
+import veille from "@/config/veille.json";
 
 const posts = await getCollection("veille");
 ---
 
-<BaseLayout>
-  {
-    posts.map((item) => (
-      <div class="max-w-1/3">
-        <a href={`/veille/${item.id}`}>
-          <div class="hover:rounded-lg hover:bg-muted/50 transition-colors p-3 text-muted-foreground">
-            <h2 class="line-clamp-1">{item.data.title}</h2>
-            <p class="capitalize text-xs">{formatDate(item.data.date)}</p>
-          </div>
-        </a>
-        <div class="border-b my-2" />
-      </div>
-    ))
-  }
+<BaseLayout title="Veille">
+  <div class="text-muted-foreground">
+    <Section
+      title={`Thème de veille : ${veille.theme}`}
+      content={[
+        "Première place (médaille d'or)",
+        "Qualification pour la finale nationale à Marseille (16-18 octobre 2025)",
+        "Séances de préparation mentale et physique",
+        "Entraînement avec un coach tout au long de l'année",
+      ]}
+    />
+  </div>
+  <div>
+    {
+      posts.map((item) => (
+        <div class="max-w-1/3">
+          <a href={`/veille/${item.id}`}>
+            <div class="hover:rounded-lg hover:bg-muted/50 transition-colors p-3 text-muted-foreground">
+              <h2 class="line-clamp-1">{item.data.title}</h2>
+              <p class="capitalize text-xs">{formatDate(item.data.date)}</p>
+            </div>
+          </a>
+          <div class="border-b my-2" />
+        </div>
+      ))
+    }
+  </div>
 </BaseLayout>
