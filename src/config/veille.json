@@ -1,0 +1,9 @@
+{
+  "theme": "L'écosystème JavaScript",
+  "description": "",
+  "boundaries": [
+    { "name": "React", "description": "" },
+    { "name": "Node.js", "description": "" },
+    { "name": "API", "description": "" }
+  ]
+}

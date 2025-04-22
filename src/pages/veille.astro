@@ -3,16 +3,12 @@ import { getCollection } from "astro:content";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
-import Nav from "@/components/Nav.astro";
-
 import { formatDate } from "@/lib/utils";
 
 const posts = await getCollection("veille");
 ---
 
 <BaseLayout>
-  <Nav />
-
   {
     posts.map((item) => (
       <div class="max-w-1/3">

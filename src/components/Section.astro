@@ -8,19 +8,19 @@ interface Props {
   content: string[];
 }
 
-const { title, content, startDate, endDate } = Astro.props;
+const props = Astro.props;
 ---
 
 <div>
-  {title && <h3 class="font-medium">{title}</h3>}
+  {props.title && <h3 class="font-medium">{props.title}</h3>}
   {
-    startDate && (
+    props.startDate && (
       <p class="capitalize text-xs">
-        {formatDate(startDate)} - {endDate ? formatDate(endDate) : "Présent"}
+        {formatDate(props.startDate)} - {props.endDate ? formatDate(props.endDate) : "Présent"}
       </p>
     )
   }
   <ul>
-    {content.map((item) => <li>{item}</li>)}
+    {props.content.map((item) => <li>{item}</li>)}
   </ul>
 </div>

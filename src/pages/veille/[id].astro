@@ -4,8 +4,6 @@ import { getCollection } from "astro:content";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
-import Nav from "@/components/Nav.astro";
-
 import { formatDate } from "@/lib/utils";
 import { render } from "astro:content";
 
@@ -25,15 +23,13 @@ const { Content } = await render(post);
 ---
 
 <BaseLayout>
-  <Nav />
-
   <div class="text-muted-foreground">
     <h1 class="text-2xl">{post.data.title}</h1>
     <ul>
       <li>Auteur : {post.data.author}</li>
-      <li>Source : <a href={post.data.source} target="_blank" class="hover:underline">{post.data.source}</a></li>
+      <li>Source : <a href={post.data.source} target="_blank" class="hover:underline">{post.data.source.split("://")[1].split("/")[0]}</a></li>
       <li>PDF : <a href={`/content/veille/PHO_${post.id}.pdf`} target="_blank" class="hover:underline">{post.id}.pdf</a></li>
-      <li>Bornage : {post.data.boundaries.join(", ")}</li>
+      <li>Bornage : {post.data.boundarie}</li>
       <li class="capitalize">Date : {formatDate(post.data.date)}</li>
     </ul>
     <article class="mt-10 prose max-w-full">
