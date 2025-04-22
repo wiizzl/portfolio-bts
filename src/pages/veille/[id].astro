@@ -32,10 +32,12 @@ const { Content } = await render(post);
     <ul>
       <li>Auteur : {post.data.author}</li>
       <li>Source : <a href={post.data.source} target="_blank" class="hover:underline">{post.data.source}</a></li>
-      <li>PDF : <a href={`/content/veille/${post.data.pdf}`} target="_blank" class="hover:underline">{post.data.pdf}</a></li>
+      <li>PDF : <a href={`/content/veille/PHO_${post.id}.pdf`} target="_blank" class="hover:underline">{post.id}.pdf</a></li>
       <li>Bornage : {post.data.boundaries.join(", ")}</li>
       <li class="capitalize">Date : {formatDate(post.data.date)}</li>
     </ul>
-    <article class="mt-10 prose max-w-full"><Content /></article>
+    <article class="mt-10 prose max-w-full">
+      <Content />
+    </article>
   </div>
 </BaseLayout>
