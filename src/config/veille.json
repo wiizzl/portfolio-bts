@@ -1,6 +1,6 @@
 {
   "theme": "L'écosystème JavaScript",
-  "description": "Test desc présentation du thème",
+  "description": "L'écosystème JavaScript est un environnement riche et dynamique qui englobe une multitude de bibliothèques, frameworks et outils permettant de développer des applications web modernes et performantes. JavaScript, initialement conçu pour rendre les pages web interactives, s'est étendu bien au-delà de ses frontières initiales pour devenir un langage incontournable tant côté client que côté serveur.",
   "boundaries": [
     {
       "name": "React",
