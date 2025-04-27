@@ -30,7 +30,7 @@ const socials = [
     <div class="gap-x-2 flex">
       {
         socials.map((item) => (
-          <a href={item.href} class="hover:underline text-sm">
+          <a href={item.href} target="_blank" class="hover:underline text-sm">
             <item.icon class="size-4 text-muted-foreground hover:text-primary" />
             <span class="sr-only">{item.name}</span>
           </a>

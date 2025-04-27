@@ -39,6 +39,12 @@ const posts = await getCollection("veille");
     }
   </div>
 
+  <Title>Mise en oeuvre</Title>
+  <div class="space-y-2">
+    <p class="text-sm">{veille.implementation.description}</p>
+    <a href={veille.implementation.link} target="_blank" class="text-sm hover:underline">Accèder au projet</a>
+  </div>
+
   <Title>Articles</Title>
   <nav class="space-y-2">
     {posts.map((item) => <Article id={item.id} title={item.data.title} date={item.data.date} />)}

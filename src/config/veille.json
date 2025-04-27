@@ -1,6 +1,10 @@
 {
   "theme": "L'écosystème JavaScript",
   "description": "L'écosystème JavaScript est un environnement riche et dynamique qui englobe une multitude de bibliothèques, frameworks et outils permettant de développer des applications web modernes et performantes. JavaScript, initialement conçu pour rendre les pages web interactives, s'est étendu bien au-delà de ses frontières initiales pour devenir un langage incontournable tant côté client que côté serveur.",
+  "implementation": {
+    "description": "Cette veille m'a permit de réaliser une application mobile Pokédex en utilisant React Native pour l'interface et en consommant une API publique afin de récupérer dynamiquement les données des Pokémon.",
+    "link": "https://github.com/wiizzl/pokedex"
+  },
   "boundaries": [
     {
       "name": "React",
