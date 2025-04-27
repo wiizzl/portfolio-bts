@@ -1,0 +1,10 @@
+---
+interface Props {
+  name: string;
+  level: string;
+}
+
+const props = Astro.props;
+---
+
+<h3 class="line-clamp-1 text-sm">- {props.name} : <span class="text-muted-foreground">{props.level}</span></h3>

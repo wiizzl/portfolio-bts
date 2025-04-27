@@ -1,0 +1,20 @@
+---
+import { formatDate } from "@/lib/utils";
+
+interface Props {
+  id: string;
+  title: string;
+  date: Date;
+}
+
+const props = Astro.props;
+---
+
+<div>
+  <a href={`/veille/${props.id}`} class="group cursor-pointer">
+    <h3 class="line-clamp-1 text-sm group-hover:underline">- {props.title}</h3>
+    <p class="text-xs text-muted-foreground capitalize">
+      {formatDate(props.date)}
+    </p>
+  </a>
+</div>

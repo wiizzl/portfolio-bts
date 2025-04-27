@@ -1,0 +1,13 @@
+---
+interface Props {
+  name: string;
+  description: string;
+}
+
+const props = Astro.props;
+---
+
+<div>
+  <h3 class="line-clamp-1 text-sm">- {props.name}</h3>
+  <p class="line-clamp-2 text-xs text-muted-foreground">{props.description}</p>
+</div>

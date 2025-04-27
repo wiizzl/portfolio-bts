@@ -4,33 +4,33 @@
   "boundaries": [
     {
       "name": "React",
-      "description": "bibliothèque JS pour construire des interfaces utilisateur interactives"
+      "description": "Bibliothèque JS pour construire des interfaces utilisateur interactives"
     },
     {
       "name": "Node.js",
-      "description": "environnement d'exécution JS côté serveur permettant de créer des applications performantes"
+      "description": "Environnement d'exécution JS côté serveur permettant de créer des applications performantes"
     },
     {
       "name": "API",
-      "description": "interface de programmation permettant à différentes applications de communiquer entre elles"
+      "description": "Interface de programmation permettant à différentes applications de communiquer entre elles"
     }
   ],
   "tools": [
     {
       "name": "daily.dev",
-      "description": "un aggrégateur de flux RSS qui s'alimente automatiquement"
+      "description": "Aggrégateur de flux RSS qui s'alimente automatiquement"
     },
     {
       "name": "Google Alert",
-      "description": "service de veille par mots-clés, notifications par email"
+      "description": "Service de veille par mots-clés, notifications par email"
     },
     {
       "name": "Feedly",
-      "description": "lecteur de flux RSS pour organiser et suivre des sources d'information"
+      "description": "Aggrégateur de flux RSS pour organiser et suivre des sources d'information"
     },
     {
       "name": "Newsletter thisweekinreact.com",
-      "description": "mail hebdomadaire par un mainteneur de React"
+      "description": "Mail hebdomadaire par un mainteneur de React"
     }
   ]
 }

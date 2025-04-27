@@ -1,0 +1,116 @@
+{
+  "educations": [
+    {
+      "name": "Campus La Chataîgneraie",
+      "link": "https://la-chataigneraie.org",
+      "diploma": "BTS SIO - Option SLAM",
+      "startDate": "09/2024",
+      "endDate": "07/2026"
+    },
+    {
+      "name": "Lycée Galilée, Franqueville-St-Pierre",
+      "link": "https://galilee.lycee.ac-normandie.fr",
+      "diploma": "BAC général - Spécialités Mathématiques et Sciences de l'ingénieur",
+      "startDate": "08/2021",
+      "endDate": "07/2024"
+    }
+  ],
+  "experiences": [
+    {
+      "name": "WorldSkills région Normandie",
+      "link": "https://worldskills-france.org/",
+      "description": "Qualification pour la compétition nationale de développement web",
+      "startDate": "11/2024",
+      "endDate": "09/2025"
+    },
+    {
+      "name": "FOLDING-ART",
+      "link": "https://folding-art.fr",
+      "description": "Développement du site e-commerce de l'entreprise",
+      "startDate": "07/2024",
+      "endDate": "Présent"
+    },
+    {
+      "name": "Laine & Maille",
+      "link": "https://laine-maille.fr",
+      "description": "Développement du site e-commerce de l'entreprise",
+      "startDate": "01/2025",
+      "endDate": "03/2025"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Frontend",
+      "items": [
+        "HTML",
+        "CSS",
+        "TailwindCSS",
+        "UnoCSS",
+        "Sass",
+        "JavaScript / TypeScript",
+        "React.js (Next.js)",
+        "Vue.js (Nuxt.js)",
+        "React Native (Expo)"
+      ]
+    },
+    {
+      "category": "Backend",
+      "items": [
+        "Node.js",
+        "PHP (Laravel & Symfony)",
+        "Python",
+        "C# .NET",
+        "Rust (Tauri)"
+      ]
+    },
+    {
+      "category": "Base de données",
+      "items": [
+        "MySQL",
+        "PostgreSQL",
+        "Redis",
+        "MongoDB",
+        "SQL",
+        "ORM (Prisma, Drizzle, Entity Framework)"
+      ]
+    },
+    {
+      "category": "Autre",
+      "items": [
+        "Machine learning",
+        "Programmation orientée objet",
+        "Docker",
+        "Git"
+      ]
+    }
+  ],
+  "certifications": [
+    "Web Design de freeCodeCamp",
+    "Ateliers RGPD",
+    "MOOC de l'ANSSI"
+  ],
+  "interests": [
+    {
+      "name": "Programmation",
+      "description": "Au début avec de simples projets web, j'ai développé une passion qui est aujourd'hui devenu un véritable projet professionnel."
+    },
+    {
+      "name": "Jeux vidéo",
+      "description": "Ma première expérience avec le numérique a été au contact d'une console de jeux."
+    }
+  ],
+  "langs": [
+    {
+      "name": "Français",
+      "level": "natif"
+    },
+    {
+      "name": "Anglais",
+      "level": "B2"
+    },
+    {
+      "name": "Allememand",
+      "level": "A2"
+    }
+  ]
+}

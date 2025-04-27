@@ -4,6 +4,8 @@ import { getCollection, render } from "astro:content";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
+import Title from "@/components/Title.astro";
+
 import { formatDate } from "@/lib/utils";
 
 export const getStaticPaths = (async () => {
@@ -22,17 +24,15 @@ const { Content } = await render(post);
 ---
 
 <BaseLayout title={post.data.title}>
-  <div class="text-muted-foreground">
-    <h1 class="text-2xl">{post.data.title}</h1>
-    <ul>
-      <li>Auteur : {post.data.author}</li>
-      <li>Source : <a href={post.data.source} target="_blank" class="hover:underline">{post.data.source.split("://")[1].split("/")[0]}</a></li>
-      <li>PDF : <a href={`/content/veille/PHO_${post.id}.pdf`} target="_blank" class="hover:underline">{post.id}.pdf</a></li>
-      <li>Bornage : {post.data.boundarie}</li>
-      <li class="capitalize">Date : {formatDate(post.data.date)}</li>
-    </ul>
-    <article class="mt-5 prose max-w-full">
-      <Content />
-    </article>
-  </div>
+  <Title>{post.data.title}</Title>
+  <ul class="text-sm">
+    <li>Auteur : {post.data.author}</li>
+    <li>Source : <a href={post.data.source} target="_blank" class="hover:underline">{post.data.source.split("://")[1].split("/")[0]}</a></li>
+    <li>PDF : <a href={`/content/veille/PHO_${post.id}.pdf`} target="_blank" class="hover:underline">{post.id}.pdf</a></li>
+    <li>Bornage : {post.data.boundarie}</li>
+    <li class="capitalize">Date : {formatDate(post.data.date)}</li>
+  </ul>
+  <article class="mt-5 prose max-w-full">
+    <Content />
+  </article>
 </BaseLayout>

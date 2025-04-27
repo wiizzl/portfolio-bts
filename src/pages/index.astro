@@ -3,121 +3,69 @@ import { Github, Linkedin, Mail } from "lucide-astro";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
-import Section from "@/components/Section.astro";
+import Certification from "@/components/cards/Certification.astro";
+import Education from "@/components/cards/Education.astro";
+import Experience from "@/components/cards/Experience.astro";
+import Interest from "@/components/cards/Interest.astro";
+import Lang from "@/components/cards/Lang.astro";
+import Skill from "@/components/cards/Skill.astro";
+import Title from "@/components/Title.astro";
+
+import resume from "@/config/resume.json";
 
 const socials = [
-  { label: "LinkedIn", icon: Linkedin, link: "https://linkedin.com/in/pierrehoulliere" },
-  { label: "GitHub", icon: Github, link: "https://github.com/wiizzl" },
-  { label: "Mail", icon: Mail, link: "mailto:contact@houlliere.com" },
+  { name: "LinkedIn", href: "https://linkedin.com/in/pierrehoulliere", icon: Linkedin },
+  { name: "GitHub", href: "https://github.com/wiizzl", icon: Github },
+  { name: "Email", href: "mailto:contact@houlliere.com", icon: Mail },
 ];
 ---
 
 <BaseLayout title="Accueil">
-  <div class="text-muted-foreground space-y-6">
-    <section class="space-y-2">
-      <div>
-        <h2 class="text-lg font-semibold">Profil</h2>
-        <p>
-          Étudiant en informatique et développeur web freelance. Actuellement à la recherche d'un stage de 5 semaines (du 26 mai au 27 juin 2025) en développement pour valider ma première année de BTS
-          Services Informatiques aux Organisations (SIO).
-        </p>
-      </div>
-      <div class="flex items-center gap-x-2.5">
-        {
-          socials.map((social) => (
-            <a href={social.link} class="text-muted-foreground" target="_blank">
-              <social.icon class="size-5 stroke-[1.8]" />
-              <span class="sr-only">{social.label}</span>
-            </a>
-          ))
-        }
-      </div>
-    </section>
-    <section class="flex flex-wrap justify-between">
-      <div class="space-y-4">
-        <div>
-          <h2 class="text-lg font-semibold">Expériences</h2>
-          <div class="space-y-2">
-            <Section
-              title="Olympiades des Métiers (WorldSkills)"
-              startDate={new Date("2024-11-19")}
-              content={[
-                "Première place (médaille d'or)",
-                "Qualification pour la finale nationale à Marseille (16-18 octobre 2025)",
-                "Séances de préparation mentale et physique",
-                "Entraînement avec un coach tout au long de l'année",
-              ]}
-            />
-            <Section
-              title="Développeur Web Freelance"
-              startDate={new Date("2023-01-01")}
-              content={[
-                "Développement d'applications web (Startup, SaaS)",
-                "E-Commerce (folding-art.fr, laine-maille.fr)",
-                "Frameworks : Next.js (React)",
-                "Bases de données : PostgreSQL, MongoDB",
-                "Méthodes agiles via tableaux Kanban",
-                "Documentation (info-galilee.vercel.app)",
-                "Animation : Framer Motion",
-                "Portfolio (houlliere.com)",
-                "Développement d'applications mobiles",
-                "B-Pump (github.com/b-pump/bpump-app)",
-                "Framework : Expo (React Native)",
-                "Méthode : Cycle en V en équipe",
-                "Cosmic-Pics (github.com/wiizzl/cosmic-pics)",
-                "Développement d'API",
-                "RESTful (github.com/b-pump/bpump-api)",
-                "FastAPI (Python), Express (TypeScript)",
-              ]}
-            />
-          </div>
-        </div>
-        <div>
-          <h2 class="text-lg font-semibold">Logiciels</h2>
-          <div>
-            <Section content={["VS Code", "WebStorm", "Neovim", "Visual Studio / Rider"]} />
-          </div>
-        </div>
-        <div>
-          <h2 class="text-lg font-semibold">Langues</h2>
-          <Section content={["Anglais (B2)", "Allemand (A2)"]} />
-        </div>
-        <div>
-          <h2 class="text-lg font-semibold">Loisirs</h2>
-          <Section content={["Programmation", "Jeux vidéo"]} />
-        </div>
-      </div>
-      <div class="space-y-4">
-        <div>
-          <h2 class="text-lg font-semibold">Formations</h2>
-          <div class="space-y-2">
-            <Section
-              title="Campus La Chataigneraie"
-              startDate={new Date("2024-09-01")}
-              endDate={new Date("2026-07-01")}
-              content={["BTS Services Informatiques aux Organisations (SIO)", "Option SLAM (Développement)"]}
-            />
-            <Section
-              title="Lycée Galilée (Franqueville)"
-              startDate={new Date("2021-09-01")}
-              endDate={new Date("2024-07-01")}
-              content={["Baccalauréat général (Mention Bien)", "Spécialités : Mathématiques et Sciences de l'Ingénieur"]}
-            />
-          </div>
-        </div>
-        <div>
-          <h2 class="text-lg font-semibold">Compétences</h2>
-          <div class="space-y-2">
-            <Section title="Langages" content={["JavaScript / TypeScript", "HTML / CSS", "C# .NET", "Rust", "PHP", "Python"]} />
-            <Section title="Frontend" content={["React.js (Next.js)", "Vue.js (Nuxt.js)", "TailwindCSS / UnoCSS", "Laravel / Symfony"]} />
-            <Section title="Backend" content={["Express", "Hono", "FastAPI"]} />
-            <Section title="Mobile" content={["React Native (Expo)", "MAUI"]} />
-            <Section title="Bureau" content={["Tauri"]} />
-            <Section title="Données" content={["MySQL", "PostgreSQL", "Redis", "MongoDB", "SQLServer", "SQL", "ORM (Prisma, Drizzle)"]} />
-            <Section title="Logiciel" content={["Programmation orientée objet (POO)", "Machine Learning"]} />
-          </div>
-        </div>
-      </div>
-    </section>
+  <Title>Profil</Title>
+  <div class="space-y-3">
+    <p class="text-sm">
+      Passionné par l'innovation technologique et le développement logiciel, je m'épanouis à explorer de nouveaux langages, frameworks et méthodologies. Curieux et rigoureux, j'aime concevoir des
+      solutions élégantes à des problématiques complexes.
+    </p>
+    <div class="gap-x-2 flex">
+      {
+        socials.map((item) => (
+          <a href={item.href} class="hover:underline text-sm">
+            <item.icon class="size-4 text-muted-foreground hover:text-primary" />
+            <span class="sr-only">{item.name}</span>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+
+  <Title>Formations</Title>
+  <div class="space-y-2">
+    {resume.educations.map((item) => <Education name={item.name} diploma={item.diploma} endDate={item.endDate} startDate={item.startDate} link={item.link} />)}
+  </div>
+
+  <Title>Expériences professionnelles</Title>
+  <div class="space-y-2">
+    {resume.experiences.map((item) => <Experience name={item.name} description={item.description} endDate={item.endDate} startDate={item.startDate} link={item.link} />)}
+  </div>
+
+  <Title>Compétences informatiques</Title>
+  <div class="space-y-1">
+    {resume.skills.map((item) => <Skill category={item.category} items={item.items} />)}
+  </div>
+
+  <Title>Certifications</Title>
+  <div class="space-y-1">
+    {resume.certifications.map((item) => <Certification name={item} />)}
+  </div>
+
+  <Title>Centres d'intérêt</Title>
+  <div class="space-y-2">
+    {resume.interests.map((item) => <Interest name={item.name} description={item.description} />)}
+  </div>
+
+  <Title>Langues</Title>
+  <div class="space-y-1">
+    {resume.langs.map((item) => <Lang name={item.name} level={item.level} />)}
   </div>
 </BaseLayout>

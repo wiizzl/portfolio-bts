@@ -3,21 +3,44 @@ import { getCollection } from "astro:content";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
-import Card from "@/components/Card.astro";
-import Section from "@/components/Section.astro";
+import Article from "@/components/cards/Article.astro";
+import Title from "@/components/Title.astro";
 
 import veille from "@/config/veille.json";
 
 const posts = await getCollection("veille");
 ---
 
-<BaseLayout title="Veille" class="space-y-5">
-  <div class="text-muted-foreground space-y-3">
-    <Section title={`Thème de veille : ${veille.theme}`} content={veille.description} />
-    <Section title="Outils de veille" content={veille.tools.map((item) => `${item.name} : ${item.description}`)} />
-    <Section title="Bornage" content={veille.boundaries.map((item) => `${item.name} : ${item.description}`)} />
+<BaseLayout title="Veille">
+  <Title>{veille.theme}</Title>
+  <p class="text-sm">{veille.description}</p>
+
+  <Title>Outils de veille</Title>
+  <div class="space-y-2">
+    {
+      veille.tools.map((item) => (
+        <div>
+          <h3 class="text-sm">- {item.name}</h3>
+          <p class="text-xs text-muted-foreground">{item.description}</p>
+        </div>
+      ))
+    }
   </div>
-  <nav>
-    {posts.map((item) => <Card id={item.id} title={item.data.title} date={item.data.date} />)}
+
+  <Title>Bornage</Title>
+  <div class="space-y-2">
+    {
+      veille.boundaries.map((item) => (
+        <div>
+          <h3 class="text-sm">- {item.name}</h3>
+          <p class="text-xs text-muted-foreground">{item.description}</p>
+        </div>
+      ))
+    }
+  </div>
+
+  <Title>Articles</Title>
+  <nav class="space-y-2">
+    {posts.map((item) => <Article id={item.id} title={item.data.title} date={item.data.date} />)}
   </nav>
 </BaseLayout>

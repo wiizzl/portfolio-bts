@@ -1,0 +1,23 @@
+---
+interface Props {
+  link: string;
+  name: string;
+  diploma: string;
+  startDate: string;
+  endDate: string;
+}
+
+const props = Astro.props;
+---
+
+<div>
+  <a href={props.link} target="_blank" class="group cursor-pointer">
+    <div class="flex items-center justify-between">
+      <h3 class="line-clamp-1 text-sm group-hover:underline">- {props.name}</h3>
+      <p class="text-xs text-muted-foreground">
+        {props.startDate} - {props.endDate}
+      </p>
+    </div>
+    <p class="text-xs text-muted-foreground">{props.diploma}</p>
+  </a>
+</div>

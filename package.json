@@ -12,13 +12,13 @@
     "@astrojs/mdx": "^4.2.5",
     "@astrojs/sitemap": "^3.3.1",
     "astro": "^5.7.5",
-    "lucide-astro": "^0.501.0"
+    "lucide-astro": "^0.503.0"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.4",
+    "tailwindcss": "^4.1.4",
     "prettier": "^3.5.3",
-    "prettier-plugin-astro": "^0.14.1",
-    "tailwindcss": "^4.1.4"
+    "prettier-plugin-astro": "^0.14.1"
   }
 }

@@ -1,0 +1,13 @@
+---
+interface Props {
+  category: string;
+  items: string[];
+}
+
+const props = Astro.props;
+---
+
+<div>
+  <h3 class="line-clamp-1 text-sm">- {props.category}</h3>
+  <p class="line-clamp-2 text-xs text-muted-foreground">{props.items.join(", ")}</p>
+</div>

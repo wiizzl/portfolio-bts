@@ -7,7 +7,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://houlliere.com",
+  site: "https://portfolio-pho-bts.vercel.app",
   redirects: {
     "/rectorat": "/PHO_TableauDeSynthese.xlsx",
   },

@@ -1,0 +1,31 @@
+---
+import me from "@/assets/me.webp";
+
+import info from "@/config/info.json";
+
+const links = [
+  { label: "veille", href: "/veille" },
+  { label: "rectorat", href: "/rectorat" },
+];
+---
+
+<header class="z-50 flex items-center justify-between rounded-lg border p-4">
+  <div class="flex items-center gap-x-3">
+    <a href="/">
+      <img src={me.src} alt="PH" class="w-8 sm:w-10 rounded-full animate-heart" />
+    </a>
+    <div>
+      <h1 class="font-semibold leading-5 sm:leading-7">{info.name}</h1>
+      <p class="line-clamp-1 text-xs font-light">{info.description}</p>
+    </div>
+  </div>
+  <div class="gap-x-3 flex">
+    {
+      links.map((item) => (
+        <a href={item.href} class="hover:underline text-sm">
+          {item.label}
+        </a>
+      ))
+    }
+  </div>
+</header>
