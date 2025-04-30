@@ -15,16 +15,19 @@ const collections = {
       author: z.string().min(3).max(56),
       source: z.string().url(),
       boundarie: z.enum(
-        veille.boundaries.map((b: { name: string }) => b.name) as [string, ...string[]],
+        veille.boundaries.map((b: { name: string }) => b.name) as [
+          string,
+          ...string[],
+        ],
       ),
       date: z.coerce.date(),
     }),
   }),
 
-  rectorat: defineCollection({
+  rp: defineCollection({
     loader: glob({
       pattern: "**/*.mdx",
-      base: "./src/content/rectorat",
+      base: "./src/content/rp",
     }),
 
     schema: z.object({
