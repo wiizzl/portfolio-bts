@@ -85,12 +85,36 @@
     }
   ],
   "certifications": [
-    "Next.js App Router Fundamentals de Vercel",
-    "Next.js SEO Fundamentals de Vercel",
-    "React Foundations for Next.js de Vercel",
-    "Responsive Web Design de freeCodeCamp",
-    "Ateliers RGPD",
-    "MOOC de l'ANSSI"
+    {
+      "name": "Next.js App Router Fundamentals de Vercel",
+      "link": "https://nextjs.org/learn/certificate?course=dashboard-app&user=49185&certId=dashboard-app-49185-1745916936647",
+      "date": "04/2025"
+    },
+    {
+      "name": "Next.js SEO Fundamentals de Vercel",
+      "link": "https://nextjs.org/learn/certificate?course=seo&user=49185&certId=seo-49185-1745918039664",
+      "date": "04/2025"
+    },
+    {
+      "name": "React Foundations for Next.js de Vercel",
+      "link": "https://nextjs.org/learn/certificate?course=react-foundations&user=49185&certId=react-foundations-49185-1745917574890",
+      "date": "04/2025"
+    },
+    {
+      "name": "Responsive Web Design de freeCodeCamp",
+      "link": "https://www.freecodecamp.org/certification/wiizzl/responsive-web-design",
+      "date": "03/2025"
+    },
+    {
+      "name": "Ateliers RGPD",
+      "link": "https://www.linkedin.com/in/pierrehoulliere/details/certifications/urn:li:fsd_profileCertification:(ACoAAE6X5TYB0rWEyUFnOzjiTRJc0rVvczedUGg,1558014131)/treasury/",
+      "date": "10/2024"
+    },
+    {
+      "name": "MOOC de l'ANSSI",
+      "link": "https://www.linkedin.com/in/pierrehoulliere/details/certifications/1726681709157/single-media-viewer/?profileId=ACoAAE6X5TYB0rWEyUFnOzjiTRJc0rVvczedUGg",
+      "date": "09/2024"
+    }
   ],
   "interests": [
     {

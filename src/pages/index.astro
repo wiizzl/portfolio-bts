@@ -56,7 +56,7 @@ const socials = [
 
   <Title>Certifications</Title>
   <div class="space-y-1">
-    {resume.certifications.map((item) => <Certification name={item} />)}
+    {resume.certifications.map((item) => <Certification name={item.name} date={item.date} link={item.link} />)}
   </div>
 
   <Title>Centres d'intérêt</Title>
