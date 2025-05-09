@@ -3,7 +3,7 @@
     {
       "name": "Campus La Chataîgneraie",
       "link": "https://la-chataigneraie.org",
-      "diploma": "BTS SIO - Option SLAM",
+      "diploma": "BTS SIO - Option SOlutions Logicielles et Applications Métiers",
       "startDate": "09/2024",
       "endDate": "07/2026"
     },
@@ -11,29 +11,28 @@
       "name": "Lycée Galilée, Franqueville-St-Pierre",
       "link": "https://galilee.lycee.ac-normandie.fr",
       "diploma": "BAC général - Spécialités Mathématiques et Sciences de l'ingénieur",
-      "startDate": "08/2021",
-      "endDate": "07/2024"
+      "startDate": "07/2024"
     }
   ],
   "experiences": [
     {
+      "name": "FOLDING-ART",
+      "link": "https://folding-art.fr",
+      "description": "Développement du site e-commerce de l'entreprise (Freelance)",
+      "startDate": "07/2024",
+      "endDate": "Présent"
+    },
+    {
       "name": "WorldSkills région Normandie",
-      "link": "https://worldskills-france.org/",
+      "link": "https://worldskills-france.org",
       "description": "Qualification pour la compétition nationale de développement web",
       "startDate": "11/2024",
       "endDate": "09/2025"
     },
     {
-      "name": "FOLDING-ART",
-      "link": "https://folding-art.fr",
-      "description": "Développement du site e-commerce de l'entreprise",
-      "startDate": "07/2024",
-      "endDate": "Présent"
-    },
-    {
       "name": "Laine & Maille",
       "link": "https://laine-maille.fr",
-      "description": "Développement du site e-commerce de l'entreprise",
+      "description": "Développement du site e-commerce de l'entreprise (Freelance)",
       "startDate": "01/2025",
       "endDate": "03/2025"
     }
@@ -67,6 +66,8 @@
       "category": "Base de données",
       "items": [
         "MySQL",
+        "MariaDB",
+        "SQLServer",
         "PostgreSQL",
         "Redis",
         "MongoDB",
@@ -102,17 +103,17 @@
     },
     {
       "name": "Responsive Web Design de freeCodeCamp",
-      "link": "https://www.freecodecamp.org/certification/wiizzl/responsive-web-design",
+      "link": "https://freecodecamp.org/certification/wiizzl/responsive-web-design",
       "date": "03/2025"
     },
     {
       "name": "Ateliers RGPD",
-      "link": "https://www.linkedin.com/in/pierrehoulliere/details/certifications/urn:li:fsd_profileCertification:(ACoAAE6X5TYB0rWEyUFnOzjiTRJc0rVvczedUGg,1558014131)/treasury/",
+      "link": "https://linkedin.com/in/pierrehoulliere/details/certifications/urn:li:fsd_profileCertification:(ACoAAE6X5TYB0rWEyUFnOzjiTRJc0rVvczedUGg,1558014131)/treasury/",
       "date": "10/2024"
     },
     {
       "name": "MOOC de l'ANSSI",
-      "link": "https://www.linkedin.com/in/pierrehoulliere/details/certifications/1726681709157/single-media-viewer/?profileId=ACoAAE6X5TYB0rWEyUFnOzjiTRJc0rVvczedUGg",
+      "link": "https://linkedin.com/in/pierrehoulliere/details/certifications/1726681709157/single-media-viewer/?profileId=ACoAAE6X5TYB0rWEyUFnOzjiTRJc0rVvczedUGg",
       "date": "09/2024"
     }
   ],
@@ -127,10 +128,6 @@
     }
   ],
   "langs": [
-    {
-      "name": "Français",
-      "level": "natif"
-    },
     {
       "name": "Anglais",
       "level": "B2"
