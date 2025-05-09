@@ -8,33 +8,33 @@
   "boundaries": [
     {
       "name": "React",
-      "description": "Bibliothèque JS pour construire des interfaces utilisateur interactives"
+      "description": "Bibliothèque JS pour construire des interfaces utilisateur interactives."
     },
     {
       "name": "Node.js",
-      "description": "Environnement d'exécution JS côté serveur permettant de créer des applications performantes"
+      "description": "Environnement d'exécution JS côté serveur permettant de créer des applications performantes."
     },
     {
       "name": "API",
-      "description": "Interface de programmation permettant à différentes applications de communiquer entre elles"
+      "description": "Interface de programmation permettant à différentes applications de communiquer entre elles."
     }
   ],
   "tools": [
     {
       "name": "daily.dev",
-      "description": "Aggrégateur de flux RSS qui s'alimente automatiquement"
+      "description": "Aggrégateur de flux RSS qui s'alimente automatiquement. Très pratique pour suivre les tendances sans devoir rechercher les flux sois même."
     },
     {
       "name": "Google Alert",
-      "description": "Service de veille par mots-clés, notifications par email"
+      "description": "Service de veille par mots-clés, notifications par email. Pratique, mais même en ciblant avec de bons mots clés, on se retrouve vite submergé par des informations non pertinentes."
     },
     {
       "name": "Feedly",
-      "description": "Aggrégateur de flux RSS pour organiser et suivre des sources d'information"
+      "description": "Aggrégateur de flux RSS pour organiser et suivre des sources d'information. Très bon outil, notamment avec l'application mobile pour se tenir au courant dans les moments d'attente."
     },
     {
       "name": "Newsletter thisweekinreact.com",
-      "description": "Mail hebdomadaire par un mainteneur de React"
+      "description": "Mail hebdomadaire par un mainteneur de React. Génial pour se tenir au courant des nouveautés liées à React (web, mobile, ...)."
     }
   ]
 }
