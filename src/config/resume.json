@@ -3,7 +3,7 @@
     {
       "name": "Campus La Chataîgneraie",
       "link": "https://la-chataigneraie.org",
-      "diploma": "BTS SIO - Option SOlutions Logicielles et Applications Métiers",
+      "diploma": "BTS SIO - Option Solutions Logicielles et Applications Métiers",
       "startDate": "09/2024",
       "endDate": "07/2026"
     },
@@ -11,7 +11,8 @@
       "name": "Lycée Galilée, Franqueville-St-Pierre",
       "link": "https://galilee.lycee.ac-normandie.fr",
       "diploma": "BAC général - Spécialités Mathématiques et Sciences de l'ingénieur",
-      "startDate": "07/2024"
+      "startDate": "11/2021",
+      "endDate": "07/2024"
     }
   ],
   "experiences": [
@@ -21,6 +22,13 @@
       "description": "Développement du site e-commerce de l'entreprise (Freelance)",
       "startDate": "07/2024",
       "endDate": "Présent"
+    },
+    {
+      "name": "Stagiaire Développeur Full Stack - Overspeed",
+      "link": "https://overspeed.fr",
+      "description": "Développement d'un micro-CMS pour les totems l'Aura des Villes",
+      "startDate": "05/2025",
+      "endDate": "06/2025"
     },
     {
       "name": "WorldSkills région Normandie",
@@ -86,6 +94,11 @@
     }
   ],
   "certifications": [
+    {
+      "name": "Postman API Fundamentals Student Expert",
+      "link": "https://badgr.com/public/assertions/VnvoaY5bSfecROcqQAH9eg",
+      "date": "05/2025"
+    },
     {
       "name": "Next.js App Router Fundamentals de Vercel",
       "link": "https://nextjs.org/learn/certificate?course=dashboard-app&user=49185&certId=dashboard-app-49185-1745916936647",

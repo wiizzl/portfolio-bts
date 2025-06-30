@@ -22,19 +22,23 @@
   "tools": [
     {
       "name": "daily.dev",
-      "description": "Aggrégateur de flux RSS qui s'alimente automatiquement. Très pratique pour suivre les tendances sans devoir rechercher les flux sois même."
+      "description": "Aggrégateur de flux RSS qui s'alimente automatiquement. Très pratique pour suivre les tendances sans devoir rechercher les flux sois même.",
+      "href": "https://daily.dev"
     },
     {
       "name": "Google Alert",
-      "description": "Service de veille par mots-clés, notifications par email. Pratique, mais même en ciblant avec de bons mots clés, on se retrouve vite submergé par des informations non pertinentes."
+      "description": "Service de veille par mots-clés, notifications par email. Pratique, mais même en ciblant avec de bons mots clés, on se retrouve vite submergé par des informations non pertinentes.",
+      "href": "https://www.google.com/alerts"
     },
     {
       "name": "Feedly",
-      "description": "Aggrégateur de flux RSS pour organiser et suivre des sources d'information. Très bon outil, notamment avec l'application mobile pour se tenir au courant dans les moments d'attente."
+      "description": "Aggrégateur de flux RSS pour organiser et suivre des sources d'information. Très bon outil, notamment avec l'application mobile pour se tenir au courant dans les moments d'attente.",
+      "href": "https://feedly.com"
     },
     {
       "name": "Newsletter thisweekinreact.com",
-      "description": "Mail hebdomadaire par un mainteneur de React. Génial pour se tenir au courant des nouveautés liées à React (web, mobile, ...)."
+      "description": "Mail hebdomadaire par un mainteneur de React. Génial pour se tenir au courant des nouveautés liées à React (web, mobile, ...).",
+      "href": "https://thisweekinreact.com/"
     }
   ]
 }
