@@ -13,7 +13,7 @@ const props = Astro.props;
 <div>
   <a href={`/veille/${props.id}`} class="group cursor-pointer">
     <h3 class="line-clamp-1 text-sm group-hover:underline">- {props.title}</h3>
-    <p class="text-xs text-muted-foreground capitalize">
+    <p class="text-muted-foreground text-xs capitalize">
       {formatDate(props.date)}
     </p>
   </a>

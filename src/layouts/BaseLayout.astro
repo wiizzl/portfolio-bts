@@ -6,18 +6,15 @@ import Header from "@/components/layout/Header.astro";
 
 import info from "@/config/info.json";
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-
 interface Props {
   title: string;
-  class?: string;
 }
 
 const props = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,18 +27,10 @@ const props = Astro.props;
     <meta name="author" content={`${info.name}, ${info.mail}`} />
     <meta name="copyright" content={info.name} />
     <meta name="description" content={info.description} />
-    <link rel="canonical" href={canonicalURL} />
-
-    <meta property="og:title" content={info.name} />
-    <meta property="og:description" content={info.description} />
-    <meta property="og:url" content={canonicalURL} />
-    <meta property="og:image" content={`${Astro.url.origin}/opengraph-image.png`} />
-    <meta property="og:site_name" content={info.name} />
-    <meta name="twitter:card" content="summary_large_image" />
 
     <title>{`${props.title} - ${info.name}`}</title>
   </head>
-  <body class="mx-auto size-full max-w-[630px] px-2.5 antialiased selection:bg-primary/25 sm:px-0">
+  <body class="selection:bg-primary/25 mx-auto size-full max-w-[630px] px-2.5 antialiased sm:px-0">
     <main class="my-8">
       <Header />
       <slot />

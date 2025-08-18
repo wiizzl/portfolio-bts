@@ -17,9 +17,16 @@
   ],
   "experiences": [
     {
-      "name": "FOLDING-ART",
+      "name": "Développeur Fullstack - laine & maille (freelance)",
+      "link": "https://laine-maille.fr",
+      "description": "Développement du site e-commerce de l'entreprise",
+      "startDate": "01/2025",
+      "endDate": "Présent"
+    },
+    {
+      "name": "Développeur Fullstack - FOLDING-ART (freelance)",
       "link": "https://folding-art.fr",
-      "description": "Développement du site e-commerce de l'entreprise (Freelance)",
+      "description": "Développement du site e-commerce de l'entreprise",
       "startDate": "07/2024",
       "endDate": "Présent"
     },
@@ -31,18 +38,11 @@
       "endDate": "06/2025"
     },
     {
-      "name": "WorldSkills région Normandie",
+      "name": "WorldSkills région Normandie (compétiteur)",
       "link": "https://worldskills-france.org",
       "description": "Qualification pour la compétition nationale de développement web",
       "startDate": "11/2024",
       "endDate": "09/2025"
-    },
-    {
-      "name": "Laine & Maille",
-      "link": "https://laine-maille.fr",
-      "description": "Développement du site e-commerce de l'entreprise (Freelance)",
-      "startDate": "01/2025",
-      "endDate": "03/2025"
     }
   ],
   "skills": [

@@ -14,10 +14,10 @@ const props = Astro.props;
   <a href={props.link} target="_blank" class="group cursor-pointer">
     <div class="flex items-center justify-between">
       <h3 class="line-clamp-1 text-sm group-hover:underline">- {props.name}</h3>
-      <p class="text-xs text-muted-foreground">
+      <p class="text-muted-foreground text-xs">
         {props.startDate} - {props.endDate}
       </p>
     </div>
-    <p class="text-xs text-muted-foreground">{props.description}</p>
+    <p class="text-muted-foreground text-xs">{props.description}</p>
   </a>
 </div>

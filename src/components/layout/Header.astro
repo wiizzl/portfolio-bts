@@ -1,5 +1,5 @@
 ---
-import me from "@/assets/me.webp";
+import me from "@/assets/me.jpg";
 
 import info from "@/config/info.json";
 
@@ -13,17 +13,17 @@ const links = [
 <header class="z-50 flex items-center justify-between rounded-lg border p-4">
   <div class="flex items-center gap-x-3">
     <a href="/">
-      <img src={me.src} alt="PH" class="w-8 sm:w-10 rounded-full animate-heart" />
+      <img src={me.src} alt="PH" class="animate-heart w-8 rounded-full sm:w-10" />
     </a>
     <div>
-      <h1 class="font-semibold leading-5 sm:leading-7">{info.name}</h1>
+      <h1 class="leading-5 font-semibold sm:leading-7">{info.name}</h1>
       <p class="line-clamp-1 text-xs font-light">{info.description}</p>
     </div>
   </div>
-  <div class="gap-x-3 flex">
+  <div class="flex gap-x-3">
     {
       links.map((item) => (
-        <a href={item.href} class="hover:underline text-sm">
+        <a href={item.href} class="text-sm hover:underline">
           {item.label}
         </a>
       ))

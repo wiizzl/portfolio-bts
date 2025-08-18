@@ -9,5 +9,5 @@ const props = Astro.props;
 
 <div>
   <h3 class="line-clamp-1 text-sm">- {props.category}</h3>
-  <p class="line-clamp-2 text-xs text-muted-foreground">{props.items.join(", ")}</p>
+  <p class="text-muted-foreground line-clamp-2 text-xs">{props.items.join(", ")}</p>
 </div>
