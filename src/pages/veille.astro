@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import { Folder } from "lucide-astro";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
@@ -19,10 +20,12 @@ const posts = await getCollection("veille");
   <div class="space-y-2">
     {
       veille.tools.map((item) => (
-        <a href={item.href} target="_blank" class="group cursor-pointer">
-          <h3 class="text-sm group-hover:underline">- {item.name}</h3>
-          <p class="text-xs text-muted-foreground">{item.description}</p>
-        </a>
+        <div>
+          <a href={item.href} target="_blank" class="group cursor-pointer">
+            <h3 class="text-sm group-hover:underline">- {item.name}</h3>
+            <p class="text-muted-foreground text-xs">{item.description}</p>
+          </a>
+        </div>
       ))
     }
   </div>
@@ -33,7 +36,7 @@ const posts = await getCollection("veille");
       veille.boundaries.map((item) => (
         <div>
           <h3 class="text-sm">- {item.name}</h3>
-          <p class="text-xs text-muted-foreground">{item.description}</p>
+          <p class="text-muted-foreground text-xs">{item.description}</p>
         </div>
       ))
     }
@@ -42,7 +45,10 @@ const posts = await getCollection("veille");
   <Title>Mise en oeuvre</Title>
   <div class="space-y-2">
     <p class="text-sm">{veille.implementation.description}</p>
-    <a href={veille.implementation.link} target="_blank" class="text-sm hover:underline">Accèder au projet</a>
+    <a href={veille.implementation.link} target="_blank" class="group flex items-center gap-x-1 text-sm">
+      <Folder class="size-4" />
+      <p class="group-hover:underline">Accèder au projet</p>
+    </a>
   </div>
 
   <Title>Articles</Title>

@@ -1,22 +1,27 @@
 ---
-import { File } from "lucide-astro";
+import { Download } from "lucide-astro";
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
 
 import Title from "@/components/Title.astro";
-import BaseLayout from "@/layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Rectorat">
   <Title>Tableau de synthèse</Title>
-  <a href="/PHO_TableauDeSynthese.xlsx" target="_blank" class="group flex items-center gap-x-1">
-    <File />
-    <p class="group-hover:underline">Télécharger le tableau de synthèse</p>
-  </a>
+  <div>
+    <a href="/PHO_TableauDeSynthese.xlsx" target="_blank" class="group flex items-center gap-x-1 text-sm">
+      <Download class="size-4" />
+      <p class="group-hover:underline">Télécharger le tableau de synthèse</p>
+    </a>
+  </div>
 
   <Title>Stage de première année</Title>
-  <div class="space-y-2">
-    <iframe src="/PHO_AttestationStage.pdf" class="h-[500px] w-full"></iframe>
+  <div>
+    <iframe src="/PHO_AttestationStage1.pdf" class="h-[500px] w-full rounded-lg"></iframe>
   </div>
 
   <Title>Stage de deuxième année</Title>
-  <div class="space-y-2"></div>
+  <div>
+    <iframe src="/PHO_AttestationStage2.pdf" class="h-[500px] w-full rounded-lg"></iframe>
+  </div>
 </BaseLayout>
