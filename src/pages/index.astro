@@ -44,12 +44,12 @@ const socials = [
     {resume.educations.map((item) => <Education name={item.name} diploma={item.diploma} endDate={item.endDate} startDate={item.startDate} link={item.link} />)}
   </div>
 
-  <Title>Expériences professionnelles</Title>
+  <Title>Expériences professionnelle</Title>
   <div class="space-y-2">
     {resume.experiences.map((item) => <Experience name={item.name} description={item.description} endDate={item.endDate} startDate={item.startDate} link={item.link} />)}
   </div>
 
-  <Title>Compétences informatiques</Title>
+  <Title>Compétences informatique</Title>
   <div class="space-y-1">
     {resume.skills.map((item) => <Skill category={item.category} items={item.items} />)}
   </div>

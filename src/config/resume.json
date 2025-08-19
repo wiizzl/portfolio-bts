@@ -31,6 +31,12 @@
       "endDate": "Présent"
     },
     {
+      "name": "Compétiteur - WorldSkills France",
+      "link": "https://worldskills-france.org/editions/competition-nationale-des-metiers-2025-48e-edition",
+      "description": "Compétition nationale en développement web au Parc Chanot à Marseille",
+      "startDate": "10/2025"
+    },
+    {
       "name": "Stagiaire Développeur Full Stack - Overspeed",
       "link": "https://overspeed.fr",
       "description": "Développement d'un micro-CMS pour les totems l'Aura des Villes",
@@ -38,11 +44,10 @@
       "endDate": "06/2025"
     },
     {
-      "name": "WorldSkills région Normandie (compétiteur)",
-      "link": "https://worldskills-france.org",
-      "description": "Qualification pour la compétition nationale de développement web",
-      "startDate": "11/2024",
-      "endDate": "09/2025"
+      "name": "Compétiteur - WorldSkills région Normandie",
+      "link": "https://parcours-metier.normandie.fr/orientation/agence/la-48e-competition-worldskills-2024-2026",
+      "description": "Médaillé d'or lors des sélections Normandes à Caen au Lycée Jean Rostand",
+      "startDate": "11/2024"
     }
   ],
   "skills": [
@@ -94,6 +99,11 @@
     }
   ],
   "certifications": [
+    {
+      "name": "PIX",
+      "link": "https://pix.fr",
+      "date": "2025"
+    },
     {
       "name": "Postman API Fundamentals Student Expert",
       "link": "https://badgr.com/public/assertions/VnvoaY5bSfecROcqQAH9eg",
