@@ -14,14 +14,17 @@ const posts = await getCollection("veille");
 
 <BaseLayout title="Veille">
   <Title>Thème de Veille : {veille.theme}</Title>
-  <p class="text-sm">{veille.description}</p>
+  <div class="space-y-2">
+    <p class="text-sm">{veille.description}</p>
+    <p class="text-sm">Un <a href="/veille/rss.xml" target="_blank" class="hover:underline">flux rss</a> existe pour cette veille.</p>
+  </div>
 
   <Title>Outils de veille</Title>
   <div class="space-y-2">
     {
       veille.tools.map((item) => (
         <div>
-          <a href={item.href} target="_blank" class="group cursor-pointer">
+          <a href={item.href} target="_blank" class="group">
             <h3 class="text-sm group-hover:underline">- {item.name}</h3>
             <p class="text-muted-foreground text-xs">{item.description}</p>
           </a>
