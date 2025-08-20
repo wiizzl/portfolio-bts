@@ -1,0 +1,63 @@
+{
+  "categories": ["TP", "Stage"],
+  "competences": [
+    {
+      "code": "B1.1",
+      "name": "Recenser et identifier les ressources numériques",
+      "sous-competences": [
+        "Exploiter des référentiels, normes et standards",
+        "Mettre en place et vérifier les niveaux d'habilitation",
+        "Vérifier la continuité d'un service informatique",
+        "Gérer des sauvegardes",
+        "Vérifier le respect des règles d'utilisation"
+      ]
+    },
+    {
+      "code": "B1.2",
+      "name": "Répondre aux incidents et aux demandes d'assistance et d'évolution",
+      "sous-competences": [
+        "Collecter, suivre et orienter des demandes",
+        "Traiter des demandes réseau et système",
+        "Traiter des demandes applicatives"
+      ]
+    },
+    {
+      "code": "B1.3",
+      "name": "Développer la présence en ligne de l'organisation",
+      "sous-competences": [
+        "Valoriser l'image sur les médias numériques",
+        "Référencer les services en ligne",
+        "Mesurer la visibilité",
+        "Faire évoluer un site Web"
+      ]
+    },
+    {
+      "code": "B1.4",
+      "name": "Travailler en mode projet",
+      "sous-competences": [
+        "Analyser les objectifs et modalités d'un projet",
+        "Planifier les activités",
+        "Évaluer les indicateurs de suivi et analyser les écarts"
+      ]
+    },
+    {
+      "code": "B1.5",
+      "name": "Mettre à disposition des utilisateurs un service informatique",
+      "sous-competences": [
+        "Réaliser les tests d'intégration et d'acceptation",
+        "Déployer un service",
+        "Accompagner les utilisateurs"
+      ]
+    },
+    {
+      "code": "B1.6",
+      "name": "Organiser son développement professionnel",
+      "sous-competences": [
+        "Mettre en place son environnement d'apprentissage",
+        "Mettre en œuvre des outils et stratégies de veille",
+        "Gérer son identité professionnelle",
+        "Développer son projet professionnel"
+      ]
+    }
+  ]
+}

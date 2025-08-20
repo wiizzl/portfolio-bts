@@ -9,7 +9,7 @@ import Title from "@/components/Title.astro";
 import { formatDate } from "@/lib/utils";
 
 export const getStaticPaths = (async () => {
-  const posts = await getCollection("veille");
+  const posts = await getCollection("realisations");
 
   return posts.map((post) => {
     return {
@@ -26,10 +26,7 @@ const { Content } = await render(post);
 <BaseLayout title={post.data.title}>
   <Title>{post.data.title}</Title>
   <ul class="text-sm">
-    <li>Auteur : {post.data.author}</li>
-    <li>Source : <a href={post.data.source} target="_blank" class="hover:underline">{post.data.source.split("://")[1].split("/")[0]}</a></li>
-    <li>PDF : <a href={`/content/veille/PHO_${post.id}.pdf`} target="_blank" class="hover:underline">{post.id}.pdf</a></li>
-    <li>Bornage : {post.data.boundarie}</li>
+    <li>Catégorie : {post.data.category}</li>
     <li class="capitalize">Date : {formatDate(post.data.date)}</li>
   </ul>
   <article class="prose prose-invert mt-5 max-w-full">

@@ -1,6 +1,7 @@
 import { glob } from "astro/loaders";
 import { defineCollection, z } from "astro:content";
 
+import realisations from "@/config/realisations.json";
 import veille from "@/config/veille.json";
 
 const collections = {
@@ -24,16 +25,18 @@ const collections = {
     }),
   }),
 
-  rp: defineCollection({
+  realisations: defineCollection({
     loader: glob({
       pattern: "**/*.mdx",
-      base: "./src/content/rp",
+      base: "./src/content/realisations",
     }),
 
     schema: z.object({
       title: z.string().min(26).max(56),
       description: z.string().min(50).max(500),
-      category: z.enum(["TP", "Stage"]),
+      category: z.enum(
+        realisations.categories.map((a) => a) as [string, ...string[]],
+      ),
       skills: z.array(z.string().min(5).max(26)),
       technos: z.array(z.string().min(5).max(26)),
       date: z.coerce.date(),
