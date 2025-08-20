@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import { Folder } from "lucide-astro";
+import { Folder, Rss } from "lucide-astro";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
@@ -16,7 +16,11 @@ const posts = await getCollection("veille");
   <Title>Thème de Veille : {veille.theme}</Title>
   <div class="space-y-2">
     <p class="text-sm">{veille.description}</p>
-    <p class="text-sm">Un <a href="/veille/rss.xml" target="_blank" class="hover:underline">flux rss</a> existe pour cette veille.</p>
+    <a href="/veille/rss.xml" target="_blank" class="group flex items-center gap-x-1 text-sm">
+      Un
+      <span class="group-hover:underline">flux rss</span>
+      <Rss class="size-4" /> est mit a disposition pour cette veille.
+    </a>
   </div>
 
   <Title>Outils de veille</Title>
