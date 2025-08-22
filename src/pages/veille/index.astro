@@ -60,6 +60,6 @@ const posts = await getCollection("veille");
 
   <Title>Articles</Title>
   <nav class="space-y-2">
-    {posts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()).map((item) => <Article id={item.id} title={item.data.title} date={item.data.date} />)}
+    {posts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()).map((item) => <Article href={`/veille/${item.id}`} title={item.data.title} date={item.data.date} />)}
   </nav>
 </BaseLayout>

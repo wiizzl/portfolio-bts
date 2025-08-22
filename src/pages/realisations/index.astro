@@ -4,12 +4,20 @@ import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 import Title from "@/components/Title.astro";
+import Article from "@/components/cards/Article.astro";
+
+import realisations from "@/config/realisations.json";
 
 const posts = await getCollection("realisations");
 ---
 
 <BaseLayout title="Réalisations">
-  <Title>Liste</Title>
-  <div>{posts.map((item) => <a href={`/realisations/${item.id}`}>{item.data.title}</a>)}</div>
-  <div></div>
+  {realisations.categories.map((item) => (
+    <Title>{item}</Title>
+    <nav class="space-y-2">
+      {posts.filter((post) => post.data.category === item).sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()).map((post) => (
+        <Article href={`/realisations/${post.id}`} title={post.data.title} date={post.data.date} details="test" />
+      ))}
+    </nav>
+  ))}
 </BaseLayout>
