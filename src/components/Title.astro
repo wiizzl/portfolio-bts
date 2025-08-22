@@ -1,6 +1,25 @@
+---
+import { ArrowLeft } from "lucide-astro";
+
+interface Props {
+  back?: string;
+}
+
+const props = Astro.props;
+---
+
 <div class="mb-3 not-first:mt-8">
-  <h2 class="mb-2">
-    <slot />
-  </h2>
+  <div class="flex items-center gap-x-1.5">
+    {
+      props.back && (
+        <a href={props.back} class="mb-2">
+          <ArrowLeft class="size-5" />
+        </a>
+      )
+    }
+    <h2 class="mb-2">
+      <slot />
+    </h2>
+  </div>
   <hr />
 </div>

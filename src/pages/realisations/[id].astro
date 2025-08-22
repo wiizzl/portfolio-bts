@@ -24,7 +24,7 @@ const { Content } = await render(post);
 ---
 
 <BaseLayout title={post.data.title}>
-  <Title>{post.data.title}</Title>
+  <Title back="/realisations">{post.data.title}</Title>
   <ul class="text-sm">
     <li>Catégorie : {post.data.category}</li>
     <li class="capitalize">Date : {formatDate(post.data.date)}</li>

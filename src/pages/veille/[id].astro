@@ -24,7 +24,7 @@ const { Content } = await render(post);
 ---
 
 <BaseLayout title={post.data.title}>
-  <Title>{post.data.title}</Title>
+  <Title back="/veille">{post.data.title}</Title>
   <ul class="text-sm">
     <li>Auteur : {post.data.author}</li>
     <li>Source : <a href={post.data.source} target="_blank" class="hover:underline">{post.data.source.split("://")[1].split("/")[0]}</a></li>
