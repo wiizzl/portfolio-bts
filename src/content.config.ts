@@ -37,7 +37,7 @@ const collections = {
       category: z.enum(
         realisations.categories.map((a) => a) as [string, ...string[]],
       ),
-      skills: z.array(z.string().min(5).max(26)),
+      skills: z.array(z.string().min(5).max(26)), // TODO: competence + sous competence
       technos: z.array(z.string().min(5).max(26)),
       date: z.coerce.date(),
     }),
